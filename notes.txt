@@ -1,0 +1,14 @@
+"script": "node server.js", //npm start
+"server": "nodemon server.js" //npm run server
+
+app.listen() in Express is like telling your app to start listening for visitors on a specific address and port, much like how Node listens for connections. 
+The app, created by `express()`, is just a handy function that handles different types of requests, making it easy to serve both HTTP and HTTPS versions of your app without extra complexity.
+
+
+// ALL ABOUT MORGAN PACKAGE
+Morgan is another HTTP request logger middleware for Node. js. It simplifies the process of logging requests to your application.
+The Morgan package in the MERN (MongoDB, Express.js, React, Node.js) stack is actually a middleware for Express.js. It helps with logging HTTP requests, making it easier to debug and analyze server-side activities. 
+Morgan logs information about incoming requests, such as the HTTP method, URL, status code, response time, and more.
+It's a handy tool during development to keep track of what's happening in your backend. 
+You can customize the logging format and choose whether to log to the console, a file, or another destination. 
+It's not necessary for the basic functioning of your MERN app, but it's a useful addition for debugging and monitoring purposes.

@@ -1,0 +1,23 @@
+import express from "express";
+import {
+  loginController,
+  registerController,
+  testController,
+} from "../controllers/authController.js";
+import { requireSignIn, isAdmin } from "../middlewares/authMiddleware.js";
+
+//router object
+const router = express.Router();
+
+//routing
+
+//REGISTER || METHOD POST
+router.post("/register", registerController); //where registerController is a callback function. But since we are working in an MVC pattern therfore we call registerController function present in authController file so that it can handle it efiiciently and our code looks neet and clean and we will add api in server.js file
+
+//LOGIN || METHOD POST
+router.post("/login", loginController);
+
+//test routes
+router.get("/test", requireSignIn, isAdmin, testController);
+
+export default router;
