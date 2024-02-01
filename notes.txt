@@ -12,3 +12,39 @@ Morgan logs information about incoming requests, such as the HTTP method, URL, s
 It's a handy tool during development to keep track of what's happening in your backend. 
 You can customize the logging format and choose whether to log to the console, a file, or another destination. 
 It's not necessary for the basic functioning of your MERN app, but it's a useful addition for debugging and monitoring purposes.
+
+
+// What does CORS package do?
+Sol : This is done to avoid Cross Origin Error .
+
+//Why does Cross Origin Error occurs?
+Sol : Agr aap ek server se dusre ko connect krenge jaise ki humare paas ek port 8080 hai aur dusra port 3000 hai toh ho sakta hai ki connect krte time 
+koi origin se related error aa jaye. Is cheez ko prevent krne ke liye hum CORS package install krte hain.
+
+//React-helmet
+-> This is used for SEO i.e Search Engine Optimisation. Using this we can create reusable meta tags
+
+// SEE useState of Ajay Juneja on Youtube
+
+// Register Page me hum frontend pe saara data dete hain toh use server pe pahunchana hoga by communicating with it. So to communicate with the server
+we use axios package. By using axios package we frontend can communicate with backend.
+
+//axios ek package hai node packet manager me (npm) . Ye package external url or api ko hit krne ka kaam krta hai. Jab hum apne app me hain toh
+woh saari app ki urls ko internal url kahenge aur app ki bahar ki urls ko external urls kahenge.
+
+What is axios?
+Axios is lightweight package and used to make HTTP requests in any Javascript library like React,Angular or Vue. Axios make it easy to send
+asynchronous HTTP requests to REST endpoints and perform CRUD operations. If you use Fetch method in Javascript , Axios is the "Easy to use" Version of Fetch.
+
+What are the advantages of using axios over fetch?
+Ans - In fetch we obtain the data in res and then we have to parse it in JSON but if we use axios we get the data already present in JSON format.
+Eg: 
+USING FETCH =>
+const res=await fetch("https://jsonplaceholder.typicode.com/posts");
+const data=await data.json();
+
+//toastify package is for beautiful notifications
+
+What is the use of useNavigate()?
+Ans -> useNavigate tb use kiya jaata hai jb koi kaam pura ho jaaye aur phir user ko dusre page pe apne aap se redirect kr diya jaaye.
+For eg = agr user signup krleta hai toh apne aap use login page pe redirect kr diya jaaya ya fir login ke baad user ko home page pe redirect kr diya jaaye apne aap.
