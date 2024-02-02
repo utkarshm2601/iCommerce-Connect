@@ -48,3 +48,5 @@ const data=await data.json();
 What is the use of useNavigate()?
 Ans -> useNavigate tb use kiya jaata hai jb koi kaam pura ho jaaye aur phir user ko dusre page pe apne aap se redirect kr diya jaaye.
 For eg = agr user signup krleta hai toh apne aap use login page pe redirect kr diya jaaya ya fir login ke baad user ko home page pe redirect kr diya jaaye apne aap.
+
+Local Storage me JSON data support nahi krta isliye hum use string me convert krke daalte hain i.e stringify function use krte hain
