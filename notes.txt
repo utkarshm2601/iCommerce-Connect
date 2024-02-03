@@ -61,3 +61,8 @@ This property is an object containing properties mapped to the named route “pa
 
 req.body
 Contains key-value pairs of data submitted in the request body. By default, it is undefined, and is populated when you use body-parsing middleware such as body-parser and multer.
+
+Photo form data ki madad se aata hai ,agr hum directly access krenge toh woh string value de dega photo ki value nahi dega , iske liye hum 
+ek package install krenge express-formidable ka. Is package ki madad se hum koi bhi file upload kr skte hain easily. See its documentation on npmjs for more clarity.
+
+Full form of fs=file system
