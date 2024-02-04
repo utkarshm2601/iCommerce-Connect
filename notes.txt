@@ -70,3 +70,7 @@ Full form of fs=file system
 
 What is Props?
 Props ka matlb hota hai property.Jo bhi attribute hum pass krenge woh humara component receive krega. Watch Ajay Suneja Props video for more clarity.
+
+What is radio?
+Radio buttons are common way to allow users to make a single seclection from a list of options.Since only one radio button can be selected
+at a time (within the same group), each available choice must be its own item and label.
