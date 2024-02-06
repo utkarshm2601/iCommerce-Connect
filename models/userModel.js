@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema(
       required: true,
     },
     address: {
-      type: String,
+      type: {}, //object -> agar multiple line likhenge toh ye direct string me save nahi hoga isliye humne ise object bana diya
       required: true,
     },
     answer: {

@@ -1,7 +1,7 @@
 {
   "name": "ecommece--app-2023",
   "version": "1.0.0",
-  "description": "Ecommerce Website",
+  "description": "Ecommerce Rest Api",
   "main": "server.js",
   "type": "module",
   "scripts": {
