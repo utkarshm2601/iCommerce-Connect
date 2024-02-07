@@ -30,7 +30,7 @@ export const registerController = async (req, res) => {
     if (exisitingUser) {
       return res.status(200).send({
         success: false,
-        message: "Already Register please login",
+        message: "Already Registered Please Login",
       });
     }
     //register user
@@ -76,7 +76,7 @@ export const loginController = async (req, res) => {
     if (!user) {
       return res.status(404).send({
         success: false,
-        message: "Email is not registerd",
+        message: "Email is not Registerd",
       });
     }
     const match = await comparePassword(password, user.password);
@@ -95,7 +95,7 @@ export const loginController = async (req, res) => {
     //chahte toh hum us route ko protected bna dete hain i.e us middleware ko us route pe laga denge taaki woh route protect kr ske hum unauthorized access se
     res.status(200).send({
       success: true,
-      message: "login successfully",
+      message: "Login Successfully",
       user: {
         _id: user._id,
         name: user.name,
@@ -122,10 +122,10 @@ export const forgotPasswordController = async (req, res) => {
   try {
     const { email, answer, newPassword } = req.body;
     if (!email) {
-      res.status(400).send({ message: "Emai is required" });
+      res.status(400).send({ message: "Email is required" });
     }
     if (!answer) {
-      res.status(400).send({ message: "answer is required" });
+      res.status(400).send({ message: "Answer is required" });
     }
     if (!newPassword) {
       res.status(400).send({ message: "New Password is required" });

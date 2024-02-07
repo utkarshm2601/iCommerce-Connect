@@ -74,3 +74,101 @@ Props ka matlb hota hai property.Jo bhi attribute hum pass krenge woh humara com
 What is radio?
 Radio buttons are common way to allow users to make a single seclection from a list of options.Since only one radio button can be selected
 at a time (within the same group), each available choice must be its own item and label.
+
+The estimatedDocumentCount() is a way to quickly get the number of documents a collection has.
+
+
+
+# axios.defaults.headers.common["Authorization"] = auth?.token;
+Explaination of above code :
+axios.defaults.headers.common:
+
+axios.defaults.headers.common is an object in Axios that allows you to set default headers for all HTTP requests made with Axios. These headers will be included in every request automatically.
+["Authorization"] = auth?.token:
+
+This line sets the "Authorization" header in the axios.defaults.headers.common object.
+auth?.token is using optional chaining (?.) to access the token property of the auth object. This is a safeguard against potential auth being null or undefined.
+Explanation:
+
+The "Authorization" header is commonly used for sending authentication tokens or API keys in HTTP requests. It is a standard mechanism for conveying credentials to access protected resources.
+Purpose:
+
+By setting the "Authorization" header in axios.defaults.headers.common, you are providing a default authorization token that will be automatically included in the headers of every Axios request. This can be useful when working with APIs that require authentication.
+Example:
+
+For example, if you have a user authentication system and the user is logged in (auth object exists with a valid token), setting this default header ensures that every subsequent Axios request includes the user's authentication token without explicitly adding it to each request individually.
+Note on Security:
+
+Be cautious when setting default headers, especially when dealing with sensitive information like authentication tokens. Make sure to handle tokens securely and be aware that setting default headers may expose them to potential security risks.
+In summary, the provided code sets a default "Authorization" header in Axios based on the authentication token (auth?.token). This can simplify the process of including authentication headers in multiple requests within an application.
+
+
+Q) What is an authprovider(React)?
+Soln -> AuthProvider is a term commonly used in the context of authentication in software development, particularly in the context of web applications. 
+It typically refers to a component or module responsible for managing and providing authentication-related functionality within an application. 
+The exact implementation and features of an AuthProvider can vary based on the specific technology stack and framework being used.
+Here are a couple of common scenarios where you might encounter the term "AuthProvider":
+React Context and Authentication:
+
+In React applications, developers often use the Context API to manage state at the application level. 
+An AuthProvider could be a custom React context provider that encapsulates the logic for handling user authentication. 
+It may provide authentication state, user information, and methods for login, logout, etc.
+
+// Example of a simple AuthProvider in React using Context API
+import React, { createContext, useContext, useState } from 'react';
+
+const AuthContext = createContext();
+
+const AuthProvider = ({ children }) => {
+  const [user, setUser] = useState(null);
+
+  const login = (userData) => {
+    // Logic to authenticate the user
+    setUser(userData);
+  };
+
+  const logout = () => {
+    // Logic to log out the user
+    setUser(null);
+  };
+
+  return (
+    <AuthContext.Provider value={{ user, login, logout }}>
+      {children}
+    </AuthContext.Provider>
+  );
+};
+
+export const useAuth = () => {
+  return useContext(AuthContext);
+};
+
+
+Backend Authentication Providers:
+
+In the context of server-side development, an AuthProvider might refer to a module or service responsible for handling authentication on the server. 
+This could involve validating user credentials, generating authentication tokens, and managing user sessions.
+
+// Example of a simple AuthProvider in a Node.js backend
+const authenticateUser = (username, password) => {
+  // Logic to authenticate the user
+  // Return an authentication token if successful
+};
+
+const validateToken = (token) => {
+  // Logic to validate the authentication token
+  // Return user information if the token is valid
+};
+
+module.exports = {
+  authenticateUser,
+  validateToken,
+};
+
+
+# The JSON.parse() method takes a JSON-formatted string (jsonString) and converts it into a JavaScript object (personObject). 
+Now, you can access the values in personObject as properties.It's important to note that the JSON string passed to JSON.parse() must be valid JSON; otherwise, a SyntaxError will be thrown. 
+Additionally, be cautious when parsing untrusted JSON data from external sources, as it could potentially contain malicious code. Always validate and sanitize input data, and consider using a try...catch block to handle parsing errors gracefully.
+
+# In Mongoose, which is an Object Data Modeling (ODM) library for MongoDB and Node.js, the populate method is used to replace specified paths in a document with documents from other collections. 
+It helps in retrieving referenced documents and populating them into the result set.

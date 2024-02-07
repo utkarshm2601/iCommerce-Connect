@@ -98,7 +98,7 @@ export const productPhotoController = async (req, res) => {
   try {
     const product = await productModel.findById(req.params.pid).select("photo"); //iski madad se sirf photo hume milegi
     if (product.photo.data) {
-      res.set("Content-type", product.photo.contentType);
+      res.set("Content-type", product.photo.contentType); // see line 317 this is basically done to set a header which tells the client browser about the type of file like image/jpeg
       return res.status(200).send(product.photo.data);
     }
   } catch (error) {
@@ -311,3 +311,15 @@ export const productCategoryController = async (req, res) => {
     });
   }
 };
+
+//above explaination line 317 - line 325
+
+// Setting the Response Header:
+
+// The res.set("Content-type", product.photo.contentType); line sets the "Content-type" header in the HTTP response.
+// This informs the client (browser or another application) about the type of content being sent in the response body.
+
+// Why Content Type is Important:
+
+// The "Content-type" header is crucial because it helps the recipient (e.g., browser) understand how to interpret the data in the response.
+// For example, if the content type is "image/jpeg," the client knows that it should treat the response body as a JPEG image.
