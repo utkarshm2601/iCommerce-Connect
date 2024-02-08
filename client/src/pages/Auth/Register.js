@@ -38,8 +38,8 @@ const Register = () => {
   };
 
   return (
-    <Layout title="Register - Ecommerce App">
-      <div className="form-container ">
+    <Layout title="Register - Ecommer App">
+      <div className="form-container" style={{ minHeight: "90vh" }}>
         <form onSubmit={handleSubmit}>
           <h4 className="title">REGISTER FORM</h4>
           <div className="mb-3">
@@ -105,7 +105,7 @@ const Register = () => {
               onChange={(e) => setAnswer(e.target.value)}
               className="form-control"
               id="exampleInputEmail1"
-              placeholder="What is Your Favourite Sports?"
+              placeholder="What is Your Favorite sports"
               required
             />
           </div>
