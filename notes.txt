@@ -172,3 +172,6 @@ Additionally, be cautious when parsing untrusted JSON data from external sources
 
 # In Mongoose, which is an Object Data Modeling (ODM) library for MongoDB and Node.js, the populate method is used to replace specified paths in a document with documents from other collections. 
 It helps in retrieving referenced documents and populating them into the result set.
+
+
+# Agar hume date aur time se deal krna hai toh moment se achha package koi bhi nahi hai
